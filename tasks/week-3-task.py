@@ -330,5 +330,6 @@ metta_code_task_bonus = '''
 ;Output --> [(:: A (:: B (:: D (:: C ()))))]
 
 '''
-result = metta.run(metta_code_task_bonus)
-print(result)
+
+# Please run it one by one since the hyperon can't run it all at once. I don't know why.
+print(metta.run(metta_code_task_1))
