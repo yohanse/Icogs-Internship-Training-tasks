@@ -363,4 +363,6 @@ metta_code_task_bonus = '''
 # I’m not sure why, but it might be due to the use of similar naming across tasks.  
 # I have attempted Task 4 but couldn't figure it out. However, you can find the code above along with the remaining tasks.
 
+# I have also solved the bonus task.
+
 print(metta.run(metta_code_task_1))
