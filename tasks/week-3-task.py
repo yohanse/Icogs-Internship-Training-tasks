@@ -96,6 +96,32 @@ metta_code_task_3 = '''
 '''
 
 
+metta_code_task_4 = '''
+;  4. write a function to find the length without the use of the :: symbol
+
+(= (length $atom) (
+    length-helper ($atom)
+    )
+)
+
+(= (length-helper ($atom)) (
+    unify ($atom)
+        (())       
+        0   
+        (
+        
+        let* (
+            ($tail (cdr-atom $atom))
+            ($tail-tail (cdr-atom $tail))
+        )
+        (trace! $tail-tail (+ 1 (length $tail-tail)))
+        ) 
+    )
+)
+!(length (:: A (:: B (:: C ()))))
+'''
+
+
 metta_code_task_5 = '''
 ; 5. a function to extract all the elements of the above list type into an expresion -- (:: 1 (:: 2 (:: 3 (:: 4 ())))) --> (1 2 3 4)
 
@@ -331,5 +357,10 @@ metta_code_task_bonus = '''
 
 '''
 
-# Please run it one by one since the hyperon can't run it all at once. I don't know why.
+
+
+# Please run each task one by one, as Hyperon cannot execute them all at once.  
+# I’m not sure why, but it might be due to the use of similar naming across tasks.  
+# I have attempted Task 4 but couldn't figure it out. However, you can find the code above along with the remaining tasks.
+
 print(metta.run(metta_code_task_1))
